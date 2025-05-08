@@ -34,9 +34,10 @@ describe('Clicking "Pusha till stacken"', () => {
 });
 
 describe('Clicking "Poppa stacken!"', () => {
-    it('should open up an alert', async () => {
+    it('should not open up an alert', async () => {
         let pop = await driver.findElement(By.id('pop'));
         await pop.click();
-        await driver.switchTo().alert();
+        let alert = true;
+        expect(alert).toBe(false);
     })
 });
