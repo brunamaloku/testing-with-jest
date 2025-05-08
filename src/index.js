@@ -9,8 +9,13 @@ window.onload = function () {
     var display = document.getElementById('top_of_stack');
 
     pop.addEventListener("click", function() {
-        var text = "Tog bort " + stack.pop();
-        alert(text);
+        let poppedElement = stack.pop();
+        if(poppedElement === undefined){
+            alert("Finns inget i stacken!");
+        } else {
+            var text = "Tog bort " + poppedElement;
+            alert(text);
+        }
     });
 
     push.addEventListener("click", function() {
