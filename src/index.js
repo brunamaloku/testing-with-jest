@@ -11,7 +11,7 @@ window.onload = function () {
     pop.addEventListener("click", function() {
         let poppedElement = stack.pop();
         if(poppedElement === undefined){
-            alert("Finns inget i stacken!");
+            return;
         } else {
             var text = "Tog bort " + poppedElement;
             alert(text);
